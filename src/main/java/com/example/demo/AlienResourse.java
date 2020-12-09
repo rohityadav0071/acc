@@ -23,26 +23,9 @@ public class AlienResourse
 	
 	
 	@RequestMapping("demo")
-	public List<Alien> getAliens()
+	public void getAliens()
 	{
-		List<Alien> l1= new ArrayList<>();
-			Alien a1=new Alien();
-			a1.setId(7000);
-			a1.setName("prem");
-			a1.setPoints(70);
-			
-			Alien a2=new Alien();
-			a2.setId(8000);
-			a2.setName("ritik");
-			a2.setPoints(50);
-				l1.add(a1);
-				l1.add(a2);
-				
-				aliendao.save(a1);
-				aliendao.save(a2);
-				
-				
-				return l1;
+				System.out.println("hello");
 	}
 	
 	@PostMapping(value = "register", consumes = "application/json")
